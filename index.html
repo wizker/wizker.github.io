@@ -45,14 +45,10 @@
       transition: padding 0.3s;
     }
 
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--dark);
-      text-decoration: none;
+    .nav-logo img {
+      height: 32px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -156,7 +152,7 @@
       background: #EDE8E0;
     }
 
-    .hero-image img {
+    .hero-image video {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -262,7 +258,18 @@
       margin-bottom: 0.75rem;
     }
 
-    .step p { font-size: 0.9rem; color: var(--mid); line-height: 1.75; }
+    .how-it-works-img {
+      width: 100%;
+      border-radius: 4px;
+      margin-top: 3.5rem;
+      display: block;
+    }
+
+    .shop-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
     /* ── PRODUCT SPLIT ── */
     .product-split {
@@ -528,7 +535,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">Wizker</a>
+    <a href="#" class="nav-logo"><img src="WIZKER_WORD_LOGO_BLACK.png" alt="Wizker" /></a>
     <ul class="nav-links">
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#product">The Brush</a></li>
@@ -552,11 +559,7 @@
       <a href="https://www.amazon.com/wizker" target="_blank" class="btn-primary fade-in">Shop the Collection</a>
     </div>
     <div class="hero-image">
-      <!--
-        REPLACE THIS PLACEHOLDER WITH YOUR HERO IMAGE:
-        <img src="assets/hero.jpg" alt="WIZKER exfoliating brush" />
-      -->
-      <div class="hero-image-placeholder">[ Hero Image ]</div>
+      <video src="finalJuice.mp4" autoplay muted loop playsinline></video>
     </div>
   </section>
 
@@ -601,16 +604,11 @@
         <p>Use before and after every shave. Enhance your hair removal results with clean, smooth skin that lasts.</p>
       </div>
     </div>
+    <img src="HOW_WIZKER_WORKS_plain_large.jpg" alt="How Wizker Works" class="how-it-works-img fade-in" />
   </section>
-
-  <!-- PRODUCT SPLIT -->
   <section class="product-split" id="product">
     <div class="product-image">
-      <!--
-        REPLACE THIS PLACEHOLDER WITH YOUR PRODUCT IMAGE:
-        <img src="assets/product.jpg" alt="WIZKER brush detail" />
-      -->
-      <div class="product-image-placeholder">[ Product Image ]</div>
+      <img src="WG_Ebony_hand.jpg" alt="WIZKER brush" />
     </div>
     <div class="product-details">
       <p class="section-label fade-in">The Brush</p>
@@ -635,7 +633,10 @@
         </div>
       </div>
 
-      <a href="https://www.amazon.com/wizker" target="_blank" class="btn-ghost fade-in">Buy on Amazon</a>
+      <div class="shop-buttons fade-in">
+        <a href="https://amzn.to/3TqzsrW" target="_blank" class="btn-ghost">Sea Blue →</a>
+        <a href="https://amzn.to/31qu3Wv" target="_blank" class="btn-ghost">Dark Blue →</a>
+      </div>
     </div>
   </section>
 
@@ -682,7 +683,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="#" class="footer-logo">Wizker</a>
+    <a href="#" class="nav-logo"><img src="WIZKER_WORD_LOGO_BLACK.png" alt="Wizker" style="height:24px;width:auto;" /></a>
     <ul class="footer-links">
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#product">The Brush</a></li>
