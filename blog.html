@@ -1,0 +1,107 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<style>
+  .blog-header {
+    padding: 5rem 8rem 3rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .blog-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .blog-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+  .blog-sub {
+    font-size: 0.9rem;
+    color: var(--mid);
+    max-width: 480px;
+  }
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 4rem 8rem;
+  }
+  .post-card {
+    border-right: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background 0.2s;
+  }
+  .post-card:nth-child(3n) { border-right: none; }
+  .post-card:hover { background: #F0EDE6; }
+  .post-card-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .post-card-image-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #E8E3DA;
+    margin-bottom: 1.5rem;
+  }
+  .post-card-meta {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .post-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+  .post-card-excerpt {
+    font-size: 0.85rem;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  @media (max-width: 900px) {
+    .blog-header { padding: 4rem 1.5rem 2rem; }
+    .post-grid { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+    .post-card { border-right: none; }
+  }
+</style>
+
+<div class="blog-header">
+  <p class="blog-eyebrow">Skincare Intelligence</p>
+  <h1 class="blog-title">The Wizker Journal</h1>
+  <p class="blog-sub">Expert advice on preventing razor bumps, ingrown hairs, and building a skincare routine that actually works.</p>
+</div>
+
+<div class="post-grid">
+  {% for post in site.posts %}
+  <a href="{{ post.url }}" class="post-card">
+    {% if post.image %}
+    <img src="{{ post.image }}" alt="{{ post.title }}" class="post-card-image" />
+    {% else %}
+    <div class="post-card-image-placeholder"></div>
+    {% endif %}
+    <p class="post-card-meta">{{ post.date | date: "%B %-d, %Y" }} &nbsp;·&nbsp; {{ post.author }}</p>
+    <h2 class="post-card-title">{{ post.title }}</h2>
+    <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
+  </a>
+  {% endfor %}
+</div>
