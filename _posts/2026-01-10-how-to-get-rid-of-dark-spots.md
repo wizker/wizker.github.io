@@ -4,7 +4,7 @@ title: "How to Get Rid of Dark Spots: Prevention First"
 date: 2026-01-10
 author: Tai Odunsi
 categories: [Skincare]
-image: /assets/blog/wizker_brush.jpg
+image: /assets/blog/Wizker_brush_man_woman_hands.jpg
 excerpt: Dark spots from razor bumps and ingrown hairs don't have to be permanent. The real solution starts before they ever form.
 ---
 
