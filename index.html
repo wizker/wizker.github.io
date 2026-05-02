@@ -501,6 +501,55 @@
       color: #B0A898;
     }
 
+    /* ── BEFORE & AFTER ── */
+    .before-after {
+      padding: 4rem 8rem;
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .before-after-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .before-after-img {
+      width: 100%;
+      max-width: 1100px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+
+    /* ── FOUNDER LAYOUT ── */
+    .founder-layout {
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 2.5rem;
+      text-align: left;
+    }
+
+    .founder-photo {
+      width: 280px;
+      height: 340px;
+      object-fit: cover;
+      object-position: top;
+      flex-shrink: 0;
+      border-radius: 2px;
+    }
+
+    .founder-words { flex: 1; }
+
+    @media (max-width: 900px) {
+      .before-after { padding: 3rem 1.5rem; }
+      .founder-layout { flex-direction: column; gap: 2rem; }
+      .founder-photo { width: 100%; height: 320px; }
+    }
+
     /* ── FADE IN ── */
     .fade-in {
       opacity: 0;
@@ -540,7 +589,7 @@
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#product">The Brush</a></li>
       <li><a href="#story">Our Story</a></li>
-    </ul>
+      <li><a href="/blog">Blog</a></li>
     <a href="https://www.amazon.com/wizker" target="_blank" class="nav-cta">Shop Now</a>
   </nav>
 
@@ -604,8 +653,14 @@
         <p>Use before and after every shave. Enhance your hair removal results with clean, smooth skin that lasts.</p>
       </div>
     </div>
-    <img src="HOW_WIZKER_WORKS_plain_large.jpg" alt="How Wizker Works" class="how-it-works-img fade-in" />
+    <img src="HOW_WIZKER_WORKS.png" alt="How Wizker Works" class="how-it-works-img fade-in" />
   </section>
+  <!-- BEFORE & AFTER -->
+  <section class="before-after">
+    <p class="before-after-label fade-in">Real Results</p>
+    <img src="before_after.webp" alt="Before and After Wizker results" class="before-after-img fade-in" />
+  </section>
+
   <section class="product-split" id="product">
     <div class="product-image">
       <img src="WG_Ebony_hand.jpg" alt="WIZKER brush" />
@@ -663,13 +718,18 @@
     <div class="founder-inner">
       <p class="section-label fade-in">Our Story</p>
       <h2 class="section-title fade-in">Made for real skin,<br />by real people.</h2>
-      <p class="founder-quote fade-in">
-        "I started Wizker because I needed it for my own skincare routine — and found there was nothing on the market for both men and women."
-      </p>
-      <p class="founder-bio fade-in">
-        After searching for a non-chemical solution to ingrown hairs with no results, the Wizker was born from three simple principles: ease of use, affordability, and effectiveness. Today it's trusted by thousands and carried at CVS nationwide.
-      </p>
-      <p class="founder-name fade-in">— The Wizker Team</p>
+      <div class="founder-layout fade-in">
+        <img src="Tai_founder.jpg" alt="Tai Odunsi, Founder of Wizker" class="founder-photo" />
+        <div class="founder-words">
+          <p class="founder-quote">
+            "I started Wizker because I needed it for my own skincare routine — and found there was nothing on the market for both men and women."
+          </p>
+          <p class="founder-bio">
+            After searching for a non-chemical solution to ingrown hairs with no results, the Wizker was born from three simple principles: ease of use, affordability, and effectiveness. Today it's trusted by thousands and carried at CVS nationwide.
+          </p>
+          <p class="founder-name">— Tai Odunsi, Founder</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -688,6 +748,7 @@
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#product">The Brush</a></li>
       <li><a href="#story">Our Story</a></li>
+      <li><a href="/blog">Blog</a></li>
       <li><a href="https://www.amazon.com/wizker" target="_blank">Shop</a></li>
     </ul>
     <p class="footer-copy">&copy; 2025 Wizker. All rights reserved.</p>
