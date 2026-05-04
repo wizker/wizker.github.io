@@ -4,7 +4,7 @@ title: "The 10 Commandments for Preventing Razor Bumps & Ingrown Hairs"
 date: 2024-08-20
 author: Tai Odunsi
 categories: [Skincare, Ingrown Hairs]
-image: /assets/blog/bumps_people.webp
+image: /assets/blog/Hito_WGS.jpg
 excerpt: Ten rules to follow religiously if you want smooth, bump-free skin after every shave. Follow all ten and ingrown hairs become a thing of the past.
 ---
 
