@@ -1,19 +1,14 @@
 title: Wizker
 description: Premium exfoliating brush for ingrown hairs and razor bumps.
 url: "https://wizker.github.io"
-baseurl: "/wizker"
-
+baseurl: ""
 permalink: /blog/:slug
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-include:
-  - WIZKER_WORD_LOGO_BLACK.png
