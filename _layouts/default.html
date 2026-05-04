@@ -1,40 +1,118 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Author" content="Tai Odunsi">
-  <meta name="Copyright" content="2024">
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.44">
-  <style type="text/css">
-    body {background-color: #f5f1ea}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.4px; font: 12.0px 'Helvetica Light'; color: #141210; -webkit-text-stroke: #141210}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 20.4px; font: 12.0px 'Helvetica Light'; color: #0000e9; -webkit-text-stroke: #0000e9; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 15.3px; font: 9.0px 'Helvetica Light'; color: #141210; -webkit-text-stroke: #141210}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 20.4px; font: 12.0px 'Helvetica Light'; color: #0000e9; -webkit-text-stroke: #0000e9; min-height: 14.0px}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.3px; font: 9.0px 'Helvetica Light'; color: #a09886; -webkit-text-stroke: #a09886}
-    li.li5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.3px; font: 9.0px 'Helvetica Light'; color: #493f36; -webkit-text-stroke: #493f36}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; background-color: rgba(245, 241, 234, 0.92)}
-    span.s3 {text-decoration: underline ; font-kerning: none}
-    span.s4 {-webkit-text-stroke: 0px #000000}
-    ul.ul1 {list-style-type: none}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — Wizker{% else %}Wizker{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  {% seo %}
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F4EE;
+      --dark: #1A1714;
+      --gold: #B8935A;
+      --gold-light: #D4B483;
+      --mid: #5C5046;
+      --border: rgba(90,72,54,0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.25rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(247,244,238,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-logo img { height: 32px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dark);
+      border: 0.5px solid var(--gold);
+      padding: 0.55rem 1.4rem;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+    footer {
+      padding: 2.5rem 8rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6rem;
+    }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 0.68rem; color: #B0A898; }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      footer { flex-direction: column; gap: 1.5rem; padding: 2rem; text-align: center; }
+    }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">{% seo %}</span></p>
-<p class="p2"><span class="s1"><a href="file:///"></a></span><br></p>
-<p class="p3"><span class="s2"><a href="https://www.amazon.com/wizker">SHOP NOW<span class="s1"></span></a></span></p>
-<p class="p1"><span class="s1">{{ content }}<span class="Apple-converted-space"> </span></span></p>
-<p class="p4"><span class="s3"></span><br></p>
-<ul class="ul1">
-  <li class="li5"><span class="s4"><a href="file:///#how-it-works"><span class="s1">HOW IT WORKS</span></a></span></li>
-  <li class="li5"><span class="s4"><a href="file:///#product"><span class="s1">THE BRUSH</span></a></span></li>
-  <li class="li5"><span class="s4"><a href="file:///#story"><span class="s1">OUR STORY</span></a></span></li>
-  <li class="li5"><span class="s4"><a href="file:///blog"><span class="s1">BLOG</span></a></span></li>
-  <li class="li5"><span class="s4"><a href="https://www.amazon.com/wizker"><span class="s1">SHOP</span></a></span></li>
-</ul>
-<p class="p6"><span class="s1">© 2025 Wizker. All rights reserved.</span></p>
+  <nav>
+    <a href="{{ site.baseurl }}/" class="nav-logo"><img src="{{ site.baseurl }}/WIZKER_WORD_LOGO_BLACK.png" alt="Wizker" /></a>
+    <ul class="nav-links">
+      <li><a href="{{ site.baseurl }}/#how-it-works">How It Works</a></li>
+      <li><a href="{{ site.baseurl }}/#product">The Brush</a></li>
+      <li><a href="{{ site.baseurl }}/#story">Our Story</a></li>
+      <li><a href="{{ site.baseurl }}/blog" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a></li>
+    </ul>
+    <a href="https://www.amazon.com/wizker" target="_blank" class="nav-cta">Shop Now</a>
+  </nav>
+
+  <main style="padding-top: 70px;">
+    {{ content }}
+  </main>
+
+  <footer>
+    <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/WIZKER_WORD_LOGO_BLACK.png" alt="Wizker" style="height:24px;width:auto;" /></a>
+    <ul class="footer-links">
+      <li><a href="{{ site.baseurl }}/#how-it-works">How It Works</a></li>
+      <li><a href="{{ site.baseurl }}/#product">The Brush</a></li>
+      <li><a href="{{ site.baseurl }}/#story">Our Story</a></li>
+      <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+      <li><a href="https://www.amazon.com/wizker" target="_blank">Shop</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2025 Wizker. All rights reserved.</p>
+  </footer>
 </body>
 </html>
