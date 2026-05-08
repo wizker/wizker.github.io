@@ -523,6 +523,18 @@
       color: #B0A898;
     }
 
+    .amazon-rating-wrap {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    amazon-product-rating {
+      --color-star-filled: var(--gold);
+      --color-star-empty: var(--border);
+      font-family: 'Jost', sans-serif;
+    }
+
     /* ── BEFORE & AFTER ── */
     .before-after {
       padding: 4rem 8rem;
@@ -732,6 +744,11 @@
         data-target-id="bp-304fa9a4-2aaf-4aaa-91ad-498bf2127f37"
         src="https://cdn.elements.amazon/elements/amazon-purchase-button/v1.0/web-component.js">
       </script>
+      <script
+        type="module"
+        data-target-id="bp-304fa9a4-2aaf-4aaa-91ad-498bf2127f37"
+        src="https://cdn.elements.amazon/elements/amazon-product-rating/v1.0/web-component.js">
+      </script>
     </div>
   </section>
 
@@ -739,8 +756,10 @@
   <section class="proof">
     <div class="proof-grid">
       <div class="proof-item fade-in">
-        <div class="proof-num">4.5★</div>
-        <p class="proof-label">Amazon Rating</p>
+        <div class="amazon-rating-wrap">
+          <amazon-product-rating product-sku="B07NSBV7K6"></amazon-product-rating>
+        </div>
+        <p class="proof-label">Verified Amazon Reviews</p>
       </div>
       <div class="proof-item fade-in">
         <div class="proof-num">100%</div>
