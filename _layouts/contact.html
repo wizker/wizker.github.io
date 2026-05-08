@@ -1,0 +1,104 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+<style>
+  .contact-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 7rem 2rem 5rem;
+    text-align: center;
+  }
+
+  .contact-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-sub {
+    font-size: 0.92rem;
+    color: var(--mid);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    border-bottom: 0.5px solid var(--gold);
+    padding-bottom: 0.25rem;
+    margin-bottom: 4rem;
+    transition: color 0.2s;
+  }
+
+  .contact-email:hover { color: var(--gold); }
+
+  .social-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 2rem;
+  }
+
+  .social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 0.5px solid var(--border);
+    padding: 0.75rem 1.4rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .social-link:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+</style>
+
+<div class="contact-wrap">
+  <p class="contact-eyebrow">Get in Touch</p>
+  <h1 class="contact-title">We'd love to<br />hear from you.</h1>
+  <p class="contact-sub">Questions about your order, the brush, or want to share your results? We read every message.</p>
+
+  <a href="mailto:info@wizker.com" class="contact-email">info@wizker.com</a>
+
+  <p class="social-label">Follow Wizker</p>
+  <div class="social-grid">
+    <a href="http://www.Instagram.com/WizkerSkin" target="_blank" class="social-link">Instagram</a>
+    <a href="https://www.tiktok.com/@wizkerskin" target="_blank" class="social-link">TikTok</a>
+    <a href="http://www.YouTube.com/WIZKER" target="_blank" class="social-link">YouTube</a>
+    <a href="http://www.Facebook.com/WizkerSkin" target="_blank" class="social-link">Facebook</a>
+    <a href="http://www.Pinterest.com/WIZKER" target="_blank" class="social-link">Pinterest</a>
+  </div>
+</div>
