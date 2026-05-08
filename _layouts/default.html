@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if page.title %}{{ page.title }} — Wizker{% else %}Wizker{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} — Wizker{% else %}Wizker | Ingrown Hair Brush & Razor Bump Exfoliator{% endif %}</title>
+
+  <!-- SEO -->
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}WIZKER ingrown hair brush: the chemical-free exfoliator designed to treat razor bumps, prevent ingrown hairs, and reduce shaving irritation.{% endif %}" />
+  <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}Wizker{% endif %}" />
+  <link rel="canonical" href="https://wizker.com{{ page.url }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+  <meta property="og:url" content="https://wizker.com{{ page.url }}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} — Wizker{% else %}Wizker{% endif %}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}WIZKER ingrown hair brush: the chemical-free exfoliator designed to treat razor bumps, prevent ingrown hairs, and reduce shaving irritation.{% endif %}" />
+  <meta property="og:image" content="{% if page.image %}https://wizker.com{{ page.image }}{% else %}https://wizker.com/WG_Ebony_hand.jpg{% endif %}" />
+  <meta property="og:site_name" content="Wizker" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — Wizker{% else %}Wizker{% endif %}" />
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}WIZKER ingrown hair brush: the chemical-free exfoliator designed to treat razor bumps, prevent ingrown hairs, and reduce shaving irritation.{% endif %}" />
+  <meta name="twitter:image" content="{% if page.image %}https://wizker.com{{ page.image }}{% else %}https://wizker.com/WG_Ebony_hand.jpg{% endif %}" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,6 +118,7 @@
       <li><a href="/#product">The Brush</a></li>
       <li><a href="/#story">Our Story</a></li>
       <li><a href="/blog" class="{% if page.url contains '/blog' %}active{% endif %}">Blog</a></li>
+      <li><a href="/contact" class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a></li>
     </ul>
     <a href="https://www.amazon.com/wizker" target="_blank" class="nav-cta">Shop Now</a>
   </nav>
@@ -112,6 +134,7 @@
       <li><a href="/#product">The Brush</a></li>
       <li><a href="/#story">Our Story</a></li>
       <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
       <li><a href="https://www.amazon.com/wizker" target="_blank">Shop</a></li>
     </ul>
     <p class="footer-copy">&copy; 2025 Wizker. All rights reserved. &nbsp;·&nbsp; <a href="/privacy" style="color:#B0A898;text-decoration:none;">Privacy Policy</a></p>
