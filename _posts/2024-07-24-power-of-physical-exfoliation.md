@@ -4,6 +4,7 @@ title: "The Power of Physical Exfoliation: Why Wizker Stands Out"
 date: 2024-07-24
 author: Tai Odunsi
 categories: [Skincare]
+image: /assets/blog/Mike.jpg
 excerpt: Chemical or physical exfoliation — which is better? Tai breaks down the difference and explains why physical exfoliation with the right tool changes everything.
 ---
 
