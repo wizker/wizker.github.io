@@ -551,22 +551,23 @@
     /* ── FOUNDER LAYOUT ── */
     .founder-layout {
       display: flex;
-      gap: 4rem;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       margin-top: 2.5rem;
-      text-align: left;
-      max-width: 960px;
+      text-align: center;
+      max-width: 760px;
       margin-left: auto;
       margin-right: auto;
     }
 
     .founder-video {
-      width: 420px;
+      width: 100%;
+      max-width: 640px;
       flex-shrink: 0;
       border-radius: 2px;
       overflow: hidden;
       aspect-ratio: 16/9;
+      margin: 2.5rem 0;
     }
 
     .founder-video iframe {
@@ -576,11 +577,11 @@
       border: none;
     }
 
-    .founder-words { flex: 1; }
+    .founder-words { width: 100%; }
 
     @media (max-width: 900px) {
       .before-after { padding: 3rem 1.5rem; }
-      .founder-layout { flex-direction: column; gap: 2rem; }
+      .founder-layout { gap: 0; }
       .founder-video { width: 100%; }
     }
 
@@ -753,6 +754,9 @@
       <p class="section-label fade-in">Our Story</p>
       <h2 class="section-title fade-in">Made for real skin,<br />by real people.</h2>
       <div class="founder-layout fade-in">
+        <p class="founder-quote">
+          "I started Wizker because I needed it for my own skincare routine — and found there was nothing on the market for both men and women."
+        </p>
         <div class="founder-video">
           <iframe
             src="https://www.youtube.com/embed/mBQDxb01bPQ"
@@ -761,9 +765,6 @@
           </iframe>
         </div>
         <div class="founder-words">
-          <p class="founder-quote">
-            "I started Wizker because I needed it for my own skincare routine — and found there was nothing on the market for both men and women."
-          </p>
           <p class="founder-bio">
             After searching for a non-chemical solution to ingrown hairs with no results, the Wizker was born from three simple principles: ease of use, affordability, and effectiveness. Today it's trusted by thousands and carried at CVS nationwide.
           </p>
