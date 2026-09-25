@@ -42,6 +42,12 @@ Modern wheat is not the same grain our ancestors ate. It's been engineered to be
 
 This is not easy. But it's worth trying for 30 days before spending another dollar on injections or prescriptions.
 
+I walk through exactly what to buy — and avoid — in this grocery store aisle-by-aisle guide:
+
+<div style="max-width:640px;margin:2rem auto;aspect-ratio:16/9;overflow:hidden;border-radius:2px;">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CZQaqJNHbBY" title="Gluten-Free Grocery Guide — Wizker" frameborder="0" allowfullscreen></iframe>
+</div>
+
 **Gluten grains to eliminate:**
 - Barley, kamut, rye, spelt, triticale, wheat and wheat germ
 - Oats and oat bran (unless certified gluten-free)
