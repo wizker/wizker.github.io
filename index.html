@@ -228,6 +228,56 @@
       100% { transform: translateX(-50%); }
     }
 
+    /* ── PRESS BAR ── */
+    .press-bar {
+      padding: 3.5rem 8rem;
+      border-bottom: 0.5px solid var(--border);
+      text-align: center;
+      background: var(--cream);
+    }
+
+    .press-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 2rem;
+      opacity: 0.7;
+    }
+
+    .press-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .press-logo {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.75;
+      filter: grayscale(100%);
+      transition: opacity 0.2s, filter 0.2s;
+    }
+
+    .press-logo--badge {
+      height: 72px;
+    }
+
+    .press-logo:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 900px) {
+      .press-bar { padding: 3rem 2rem; }
+      .press-logos { gap: 2rem; }
+      .press-logo { height: 28px; }
+      .press-logo--badge { height: 56px; }
+    }
+
     /* ── HOW IT WORKS ── */
     .section { padding: 7rem 8rem; }
 
@@ -716,6 +766,18 @@
     </div>
   </div>
 
+  <!-- PRESS / AS SEEN IN -->
+  <section class="press-bar">
+    <p class="press-label fade-in">As Seen In</p>
+    <div class="press-logos fade-in">
+      <img src="ebony_award.png" alt="Ebony Beauty & Grooming Awards 2026" class="press-logo press-logo--badge" />
+      <img src="Black_zone.png" alt="Black Zone Magazine" class="press-logo" />
+      <img src="Mood.png" alt="MOOD Magazine" class="press-logo" />
+      <img src="Naples_Illustrated.png" alt="Naples Illustrated" class="press-logo" />
+      <img src="CVS_logo_wizker.jpg" alt="CVS" class="press-logo" />
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="section" id="how-it-works">
     <p class="section-label fade-in">The Method</p>
@@ -879,4 +941,4 @@
   </script>
 
 </body>
-</html>y
+</html>
